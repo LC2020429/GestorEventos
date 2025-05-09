@@ -1,0 +1,337 @@
+/* Estilos generales para el calendario */
+.react-calendar {
+  width: 100%;
+  max-width: 800px; /* Tamaño más grande para el calendario */
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  margin: 2rem auto; /* Centrar y agregar margen alrededor */
+}
+
+.react-calendar__tile {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.react-calendar__tile:hover {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #e5e7eb;
+}
+
+.react-calendar__tile:enabled {
+  cursor: pointer;
+}
+
+/* Mostrar eventos dentro de cada celda del calendario */
+.react-calendar__tile div {
+  font-size: 10px;
+  font-weight: 600;
+  color: #3b82f6;
+  text-align: center;
+}
+
+/* Lista de eventos (como tarjetas) */ /* Contenedor principal del calendario */
+.calendar-container {
+  margin-top: 6rem; /* Espacio para el navbar */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos base del calendario */
+.react-calendar {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  margin: 0 auto 2rem;
+  border: none;
+  overflow: hidden;
+}
+
+/* Cabecera del calendario (mes/año) */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3b82f6;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  min-width: 44px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: transparent;
+  color: #d1d5db;
+}
+
+/* Días de la semana */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+/* Celdas de los días */
+.react-calendar__tile {
+  padding: 0.75em 0.5em;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.react-calendar__tile:enabled:hover {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f9fafb;
+  color: #d1d5db;
+}
+
+.react-calendar__tile--now {
+  background-color: #e6f7ff;
+  color: #3b82f6;
+}
+
+.react-calendar__tile--active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Marcadores de eventos en celdas */
+.calendar-event-marker {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  margin-top: 2px;
+}
+
+/* Sección de eventos del día seleccionado */
+.selected-events {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 1.5rem;
+}
+
+.selected-events h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+/* Lista de eventos */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjeta de evento */
+.event-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.event-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.event-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.event-meta-item {
+  font-size: 0.85rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.event-meta-item svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Cuando no hay eventos */
+.no-events {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  color: #6b7280;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calendar-container {
+    margin-top: 4rem;
+    padding: 1rem;
+  }
+
+  .react-calendar {
+    padding: 1rem;
+  }
+
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+}
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+/* Tarjeta del evento */
+.event-card {
+  width: 250px; /* Ancho de las tarjetas */
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenido de la tarjeta */
+.event-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.event-info {
+  flex: 1 1 60%;
+}
+
+.event-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.event-description {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Meta e información adicional */
+.event-meta,
+.event-priority {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.3rem;
+}
+
+/* Estilo para el botón */
+.btn {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 999px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  height: auto;
+  min-height: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Estilo de cuando no hay eventos */
+.no-events {
+  text-align: center;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Ajuste para el contenedor de la vista de calendario */
+.calendar-container {
+  margin-top: 60rem;
+  padding: 2rem;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ajustes de estilo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .react-calendar {
+    max-width: 100%; /* Asegura que el calendario ocupe todo el ancho en pantallas pequeñas */
+  }
+
+  .event-card {
+    max-width: 100%; /* Las tarjetas de eventos se adaptan a pantallas pequeñas */
+  }
+
+  .calendar-container {
+    margin-top: 4rem; /* Menos espacio encima del calendario en pantallas pequeñas */
+  }
+}

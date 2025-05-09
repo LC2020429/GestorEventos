@@ -1,0 +1,67 @@
+.navbar {
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  width: 100%; /* Ocupa todo el ancho */
+  top: 0;
+  left: 0;
+  position: fixed; /* Fijar el navbar en la parte superior */
+  z-index: 1; /* Asegurarse de que el navbar esté encima de otros elementos */
+}
+
+.navbar .container {
+  max-width: 100%; /* Ancho máximo */
+  margin-left: 5%;
+  padding: 1rem; /* Espaciado */
+  display: flex; /* Flexbox para el layout */
+  flex-direction: column; /* Colocamos el título encima de los links */
+}
+
+.navbar .logo {
+  font-size: 2rem; /* Título más grande */
+  font-weight: bold; /* Negrita */
+  color: #1e3a8a; /* Color azul */
+  text-align: left; /* Alineado a la izquierda */
+}
+
+.navbar .nav-links {
+  display: flex; /* Flexbox para los enlaces */
+  gap: 1.5rem; /* Espaciado entre enlaces */
+  margin-top: 0.5rem; /* Un poco de separación con el logo */
+  justify-content: left; /* Alineación de los enlaces a la izquierda */
+}
+
+.navbar .nav-links a {
+  color: #6b7280; /* Color gris para enlaces */
+  font-size: 1rem; /* Tamaño de la fuente */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s ease-in-out; /* Transición suave al cambiar color */
+}
+
+.navbar .nav-links a:hover {
+  color: #2563eb; /* Azul al hacer hover */
+}
+
+.navbar .nav-links a.active {
+  color: #1e3a8a; /* Color azul para el enlace activo */
+  font-weight: 600; /* Negrita para el enlace activo */
+}
+
+.navbar .theme-toggle {
+  position: absolute; /* Alineación absoluta */
+  margin-right: 5%;
+  margin-left: 80%;
+  right: 1rem; /* Alineado a la derecha */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para centrar */
+  padding: 0.5rem 1rem; /* Espaciado */
+  background-color: #4d8df7; /* Fondo azul */
+  color: white; /* Color blanco */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Manito al pasar */
+  transition: background-color 0.3s ease; /* Efecto de hover */
+}
+
+.navbar .theme-toggle:hover {
+  background-color: #2563eb; /* Azul más oscuro al hacer hover */
+}
